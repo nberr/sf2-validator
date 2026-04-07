@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SoundFont Validator</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="hero">
+        <p class="eyebrow">FLM SoundFont Tools</p>
+        <h1>Validate `.sf2` files in the browser</h1>
+        <p class="intro">
+          Upload a SoundFont 2 file and this page will run the same structural checks as the
+          `SoundFont` loader to tell you whether the file is valid.
+        </p>
+      </section>
+
+      <section class="panel">
+        <label class="upload" for="soundfont-file">
+          <span class="upload-title">Choose an `.sf2` file</span>
+          <span class="upload-subtitle">Nothing is uploaded. Validation runs entirely in your browser.</span>
+          <input id="soundfont-file" type="file" accept=".sf2,application/octet-stream" />
+        </label>
+
+        <div id="status" class="status status-idle">
+          <h2>Waiting for file</h2>
+          <p>Select a SoundFont file to validate it.</p>
+        </div>
+
+        <dl id="summary" class="summary" hidden>
+          <div>
+            <dt>Presets</dt>
+            <dd id="summary-presets">0</dd>
+          </div>
+          <div>
+            <dt>Instruments</dt>
+            <dd id="summary-instruments">0</dd>
+          </div>
+          <div>
+            <dt>Samples</dt>
+            <dd id="summary-samples">0</dd>
+          </div>
+          <div>
+            <dt>PCM frames</dt>
+            <dd id="summary-sample-data">0</dd>
+          </div>
+        </dl>
+
+        <section id="details" class="details" hidden>
+          <h3>Validation details</h3>
+          <ul id="details-list"></ul>
+        </section>
+      </section>
+    </main>
+
+    <script type="module" src="./app.mjs"></script>
+  </body>
+</html>
