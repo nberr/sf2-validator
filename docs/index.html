@@ -9,17 +9,12 @@
   <body>
     <main class="page">
       <section class="hero">
-        <p class="eyebrow">FLM SoundFont Tools</p>
-        <h1>Validate `.sf2` files in the browser</h1>
-        <p class="intro">
-          Upload a SoundFont 2 file and this page will run the same structural checks as the
-          `SoundFont` loader to tell you whether the file is valid.
-        </p>
+        <h1>SoundFont File Validator</h1>
       </section>
 
       <section class="panel">
         <label class="upload" for="soundfont-file">
-          <span class="upload-title">Choose an `.sf2` file</span>
+          <span class="upload-title">Choose a sf2 file</span>
           <span class="upload-subtitle">Nothing is uploaded. Validation runs entirely in your browser.</span>
           <input id="soundfont-file" type="file" accept=".sf2,application/octet-stream" />
         </label>
@@ -53,6 +48,14 @@
           <ul id="details-list"></ul>
         </section>
       </section>
+
+      <footer class="footer">
+        <p>
+          <a href="https://github.com/nberr/sf2-validator" target="_blank" rel="noreferrer">
+            View source on GitHub
+          </a>
+        </p>
+      </footer>
     </main>
 
     <script type="module" src="./app.mjs"></script>

@@ -155,6 +155,25 @@ input[type="file"] {
   line-height: 1.5;
 }
 
+.footer {
+  margin-top: 16px;
+  font-size: 0.95rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.footer a:hover,
+.footer a:focus-visible {
+  text-decoration: underline;
+}
+
 @media (max-width: 640px) {
   .page {
     width: min(100vw - 20px, 920px);
